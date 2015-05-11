@@ -19,6 +19,8 @@ def main():
             if not 'flags-designs' in img_url:
                 continue
             dst_name = 'img/' + str(img_num) + img_url[-4:]
+            # just awful
+            dst_name = dst_name.lower()
             dst_name = dst_name.replace('jpeg', '.jpg')
             urllib.urlretrieve(base_url + img_url, dst_name)
             print dst_name, 'created.'
